@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display&family=Sora:wght@100..800&display=swap');
+
+body{
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: "Barlow Semi Condensed" ,sans-serif;
+  background: rgb(31,55,86);
+  background: radial-gradient(circle, #1f3756 0%, rgba(20,21,57,1) 100%);
+}
+
+.containerMain{
+  background-image: url(./images/bg-triangle.svg);
+  background-size: 60% 55%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#root{
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .containerMain{
+    background-size: 70% 80%;
+  }
+}
