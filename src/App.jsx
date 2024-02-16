@@ -59,7 +59,7 @@ function App() {
       >
         <div className=" h-[100%] py-10 md:p-4 md:bloc flex flex-col justify-between items-center ">
           <h1 className="text-[#3b4363] text-[30px] font-semibold md:text-start  ">RULES</h1>
-          <img src={RulesGame} alt="" className="w-[75%] md:mx-auto md:mt-12 " />
+          <img src={RulesGame} alt="" className="w-[75%] md:mx-auto md:mt-12 xl:mb-10 " />
           <img
             onClick={() => {
               setIsOpen("none");

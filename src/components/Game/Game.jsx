@@ -71,19 +71,19 @@ export default function Game(props) {
         ) : (
           <Rock />
         )}
-        <p className="xl:text-[40px] "> YOU PICKED</p>
+        <p className="xl:text-[35px] "> YOU PICKED</p>
       </div>
 
       <div className="w-[50%] h-[55%] md:flex-col-reverse text-white flex flex-col justify-between items-center ">
         {countdown > 0 ? (
-          <p className="text-[40px] text-white mt-12 xl:text-[80px] ">{countdown}</p>
+          <p className="text-[40px] text-white mt-12 xl:text-[80px] animate-ping ">{countdown}</p>
         ) : (
           choixRandom && choixRandom.component
         )}
-        <p className="xl:text-[40px]">THE HOUSE PICKED</p>
+        <p className="xl:text-[35px]">THE HOUSE PICKED</p>
       </div>
       <div className="flex flex-col justify-center items-center w-[100%] lg:absolute lg:w-[80%] right-[100px] lg:top-[200px] xl:right-[150px] xl:top-[300px] ">
-        <p className="text-white text-[44px] font-bold xl:text-[80px]">{result}</p>
+        <p className="text-white text-[44px] font-bold xl:text-[80px] animate-pulse ">{result}</p>
 
         <button
           onClick={() => {
