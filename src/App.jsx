@@ -27,7 +27,7 @@ function App() {
       <Header score={score} />
 
       {navigation == "home" ? (
-          <div className="w-[90%] h-[55%] md:w-[600px] md:h-[380px] md:mt-10 md:p-0 px-5 mt-8  mx-auto flex flex-wrap justify-between md:justify-around p-2 containerMain  xl:h-[550px] xl:mt-[50px] xl:w-[750px] xl:pb-10  ">
+          <div className="w-[90%] h-[55%] md:w-[600px] md:h-[380px] md:mt-10 md:p-0 px-5 mt-8  mx-auto flex flex-wrap justify-between md:justify-around p-2 containerMain  xl:h-[550px] xl:w-[750px] xl:pb-10 xl:mt-8">
           <Paper counter={counter} setNavigation = {setNavigation} />
           <Scissors setNavigation = {setNavigation} />
           <div className="w-[100%] h-[50%] flex justify-center items-end ">
