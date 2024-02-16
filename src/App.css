@@ -24,3 +24,9 @@ body{
     background-size: 70% 80%;
   }
 }
+@media (min-width: 1440px) {
+  .containerMain{
+    background-size: 70% 75% ;
+    background-position-y: 50%;
+  }
+}

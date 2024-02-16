@@ -11,7 +11,7 @@ export default function Game(props) {
   ];
   const [result, setResult] = useState("");
   const [choixRandom, setChoixRandom] = useState(null);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(2);
 
   //! *****************************************
   useEffect(() => {
@@ -47,10 +47,16 @@ export default function Game(props) {
       (choixUser === "paper" && choixPc === "rock")
     ) {
       setResult("YOU WIN");
+      props.setScore(props.score +1)
     } else if (choixUser === choixPc) {
       setResult("IT'S A DRAW");
     } else {
       setResult("YOU LOSE");
+      if (props.score > 0) {
+        props.setScore(props.score -1)
+      }else{
+
+      }
     }
   };
   //! ****************************************
@@ -65,25 +71,25 @@ export default function Game(props) {
         ) : (
           <Rock />
         )}
-        <p>YOU PICKED</p>
+        <p className="xl:text-[40px] "> YOU PICKED</p>
       </div>
 
       <div className="w-[50%] h-[55%] md:flex-col-reverse text-white flex flex-col justify-between items-center ">
         {countdown > 0 ? (
-          <p className="text-[40px] text-white mt-12 ">{countdown}</p>
+          <p className="text-[40px] text-white mt-12 xl:text-[80px] ">{countdown}</p>
         ) : (
           choixRandom && choixRandom.component
         )}
-        <p>THE HOUSE PICKED</p>
+        <p className="xl:text-[40px]">THE HOUSE PICKED</p>
       </div>
-      <div className="flex flex-col justify-center items-center w-[100%] lg:absolute lg:w-[80%] right-[100px] lg:top-[200px] ">
-        <p className="text-white text-[44px] font-bold ">{result}</p>
+      <div className="flex flex-col justify-center items-center w-[100%] lg:absolute lg:w-[80%] right-[100px] lg:top-[200px] xl:right-[150px] xl:top-[300px] ">
+        <p className="text-white text-[44px] font-bold xl:text-[80px]">{result}</p>
 
         <button
           onClick={() => {
             props.setNavigation("home");
           }}
-          className="text-[#1f3756] px-12 rounded-xl py-2 bg-white"
+          className="text-[#1f3756] px-12 rounded-xl py-2 xl:px-[100px] xl:py-[15px] bg-white"
         >
           PLAY AGAIN
         </button>
